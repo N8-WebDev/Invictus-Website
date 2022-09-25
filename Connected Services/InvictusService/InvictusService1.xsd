@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InvictusService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InvictusService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSystemUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SystemUser" nillable="true" type="tns:SystemUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSystemUser" nillable="true" type="tns:ArrayOfSystemUser" />
+  <xs:complexType name="SystemUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="RegDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserAddresses" nillable="true" type="tns:ArrayOfUserAddress" />
+      <xs:element minOccurs="0" name="UserEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserForgotCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserForgotCodeSentTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserIPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPayments" nillable="true" type="tns:ArrayOfUserPayment" />
+      <xs:element minOccurs="0" name="UserStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="UserSurname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemUser" nillable="true" type="tns:SystemUser" />
+  <xs:complexType name="ArrayOfUserAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserAddress" nillable="true" type="tns:UserAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserAddress" nillable="true" type="tns:ArrayOfUserAddress" />
+  <xs:complexType name="UserAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+      <xs:element minOccurs="0" name="AddressName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressPhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressPostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemUser" nillable="true" type="tns:SystemUser" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserAddress" nillable="true" type="tns:UserAddress" />
+  <xs:complexType name="ArrayOfUserPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserPayment" nillable="true" type="tns:UserPayment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserPayment" nillable="true" type="tns:ArrayOfUserPayment" />
+  <xs:complexType name="UserPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accounyt_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Expiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Payment_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Provider" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemUser" nillable="true" type="tns:SystemUser" />
+      <xs:element minOccurs="0" name="User_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserPayment" nillable="true" type="tns:UserPayment" />
+  <xs:complexType name="Product">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DISC_Active" type="xs:int" />
+      <xs:element minOccurs="0" name="DISC_DiscPercent" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Extra_Image1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extra_Image2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extra_Image3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prod_Desciption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prod_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Prod_Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prod_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prod_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Prod_Quantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Product" nillable="true" type="tns:Product" />
+  <xs:complexType name="ArrayOfProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product" nillable="true" type="tns:Product" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct" nillable="true" type="tns:ArrayOfProduct" />
+</xs:schema>
